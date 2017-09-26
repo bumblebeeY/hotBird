@@ -58,7 +58,7 @@ var User = {
         var email =req.body.email;
         var partment=req.body.partment;
         var tag = req.body.tag;
-        var creater = req.body.creater || '';
+        var creater = req.body.creater || ' ';
         if (!username || !password || !tel || !email || !tag || !creater) {
             return res.send({
                 status: 0,

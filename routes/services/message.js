@@ -62,7 +62,7 @@ var Message = {
             try {
                 var obj = JSON.parse(data);
                 for (var i in obj) {
-                    if (obj[i] === token) {
+                    if (obj[i].token === token) {
                         var msgObj = JSON.parse(fs.readFileSync(MESSAGE_PATH));
                         msgObj.push({
                             messageid: util.guid(),
@@ -70,7 +70,7 @@ var Message = {
                             username: obj[i].username,
                             time: new Date().getFullYear() + '-' + (parseInt(new Date().getMonth() + 1)) + '-' + new Date().getDate(),
                             message: message
-                        })
+                        });
                         fs.writeFileSync(MESSAGE_PATH,JSON.stringify(msgObj));
                         return res.send({
                             status:1

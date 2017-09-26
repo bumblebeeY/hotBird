@@ -11,21 +11,34 @@
 <script type="text/javascript">
     $.ajax({
         type:"POST",
-        url:'http://127.0.0.1:3000/user/create',
+        url:'http://localhost:3000/message/add',
         dataType:'json',
         data:{
-            'username': 'gongyi',
-            'password': 'qw',
-            'tel': '17607199026',
-            'email': 'q',
-            'tag': '技术部',
-            'creater': 'gongyi',
-            'time': new Date(),
-            'partment':'aaaa',
-            'token': ''
+            'message': '消息33331',
+            'token': '11111'
         }
     }).done(function (data) {
         $('body').append(JSON.stringify(data));
     })
 </script>
+<!--<script type="text/javascript">-->
+    <!--$.ajax({-->
+        <!--type:"POST",-->
+        <!--url:'http://127.0.0.1:3000/user/create',-->
+        <!--dataType:'json',-->
+        <!--data:{-->
+            <!--'username': 'gongyi',-->
+            <!--'password': 'qw',-->
+            <!--'tel': '17607199026',-->
+            <!--'email': 'q',-->
+            <!--'tag': '技术部',-->
+            <!--'creater': 'gongyi',-->
+            <!--'time': new Date(),-->
+            <!--'partment':'aaaa',-->
+            <!--'token': ''-->
+        <!--}-->
+    <!--}).done(function (data) {-->
+        <!--$('body').append(JSON.stringify(data));-->
+    <!--})-->
+<!--</script>-->
 </html>
